@@ -1,0 +1,105 @@
+@import url(style.css);
+/* .calendar{
+    table-layout: fixed;
+    overflow: scroll;
+    td, th{
+        border: 1px solid var(--pale-third-color);
+    }
+    thead.days-of-the-week{  
+        height: 2.5rem;
+        th{
+            border-top:none;
+            text-align: center;
+            color: var(--accent-color);
+            font-size: 13px;
+        }
+    }
+    tr.row{  
+        min-height: 4rem;
+        overflow: scroll;
+        td{
+            min-width: 6rem;
+            padding: 5px;
+            position: relative;
+            text-align: center;
+            
+            span{
+                position: absolute;
+                top: 2px;
+                left: 2px;
+                color: var(--pale-third-color);
+                font-size: 0.75rem; 
+            }
+            .events{
+                margin-top: 15px;
+                min-width: 5rem;
+                border-radius: 5px;
+                list-style-type: none;
+                height: 3.2rem;
+                overflow-y: scroll;
+                overflow: scroll;
+                scrollbar-width: none;
+                scroll-snap-type: y mandatory;
+                color: var(--main-color);
+
+                &:has(li:hover){
+                    
+                } 
+                
+                li{
+                    scroll-snap-align: start;
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 5px;
+                    padding: 6.5px 0;
+                    font-size: 12px;
+                    background-color: var(--background-color);
+                    border-left: 2px solid var(--main-color);
+                    
+                    &:hover{
+                        position: absolute;
+                            top: 5px;
+                        overflow-y: visible;
+                        width: 200px;
+                        height: 200px;
+                        z-index: 100;
+                        background-color: #fff;
+                        border: 2px solid var(--main-color);
+                        color: var(--third-color);
+                        
+                    } 
+                }
+            }
+        }
+        &:last-of-type td {
+        border-bottom: none;
+        }
+        &:first-of-type td {
+            border-top: none;
+        }
+    }
+    th:first-of-type,
+    td:first-of-type {
+        border-left: none;
+    }
+    th:last-of-type,
+    td:last-of-type {
+        border-right: none;
+    }
+    
+}
+
+.upcoming-events {
+    background-color: var(--third-color);
+}
+.add-event {
+    background-color: var(--pale-main-color);
+    height: 200px;
+    width: 100%;
+
+} */
+
+.sun::before,
+.calendar::before {
+    content: '';
+}
