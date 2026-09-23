@@ -226,7 +226,7 @@ nav{
         }
     }
 }
-@media (max-width: 550px) or (max-aspect-ratio: 4/3){
+@media (max-width: 550px) or (max-aspect-ratio: 3/2){
     :root{
         --space: 5px;
     }
