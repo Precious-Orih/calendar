@@ -5,31 +5,31 @@
     src: url(../fonts/Lexend/Lexend-VariableFont_wght.woff2);
     font-style: normal;
 }
-:root, [data-theme = "blue"]{
-    --primary-color: #76adca;
-    --secondary-color: #9e7323;
-    --tertiary-color: #17597c;
-    --background-color: hsl(from var(--primary-color) h s calc(l + 20) / 0.25);
+:root, [data-color-theme = "blue"]{
+    --primary-color: #17597c;
+    --secondary-color: #b4d0e0;
+    --tertiary-color: #9e7323;
+    --background-color: hsl(from var(--secondary-color) h s l / 0.25);
 }
-[data-theme="purple"] {
-    --primary-color: #ac92c1;
-    --secondary-color: #707f57;
-    --tertiary-color: #61457d;
-    --background-color: hsl(from var(--primary-color) h s calc(l + 20) / 0.25);
+[data-color-theme="purple"] {
+    --primary-color: #61457d;
+    --secondary-color: #d1bede;
+    --tertiary-color: #707f57;
+    --background-color: hsl(from var(--secondary-color) h s calc(l + 0) / 0.25);
 }
-[data-theme="pink"] {
-    --primary-color: #efbbd2;
-    --secondary-color: #304061;
-    --tertiary-color: #a94664;
-    --background-color: hsl(from var(--primary-color) h s calc(l + 10) / 0.35);
+[data-color-theme="pink"] {
+    --primary-color: #a94664;
+    --secondary-color: #efbbd2;
+    --tertiary-color: #304061;
+    --background-color: hsl(from var(--secondary-color) h s l / 0.35);
 }
 :root {
     --main-color: var(--primary-color);
-    --accent-color: var(--secondary-color);
-    --third-color: var(--tertiary-color);
-    --pale-main-color: hsl(from var(--main-color) h s calc(l + 50));
+    --second-main-color: var(--secondary-color);
+    --accent-color: var(--tertiary-color);
+    --pale-second-main-color: hsl(from var(--second-main-color) h s calc(l + 14));
     --pale-accent-color: hsl(from var(--accent-color) h s calc(l + 40));
-    --pale-third-color: hsl(from var(--third-color) h s l);
+    --pale-main-color: hsl(from var(--main-color) h s calc(l + 40));
     --bg-color: var(--background-color);
     --rounding: 0.25rem;
     --space: 10px;
@@ -45,6 +45,10 @@
 body{
     display: flex;
     flex-direction: column;
+    width: 100vw;
+    height: 100dvh;
+    background-color: var(--bg-color);
+    overflow: hidden;
 }
 nav{
     background-color: #fff;
@@ -61,21 +65,27 @@ nav{
         font-size: 2rem;
     }
     i{
-        color: var(--third-color);
+        color: var(--main-color);
         font-size: 1.5rem;
     }
     .name-and-logo{
         color: var(--accent-color);
-        gap: 0.25rem;
+        gap: calc(var(--space)/2);
     }
     .navlinks{
         list-style-type: none;
         margin-left: auto;
+        height: 100%;
 
         li{
-            padding: 0.68rem 1rem;
+            /* padding: 0.75rem 1rem; */
+            height: 100%;
+            aspect-ratio: 1 / 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             &.active{
-                background-color: var(--pale-third-color);
+                background-color: var(--second-main-color);
                 i {
                     color: white;
                 }
@@ -90,49 +100,48 @@ nav{
         
     }
 }
-body{
-    width: 100vw;
-    height: 100dvh;
-    background-color: var(--bg-color);
-    overflow: hidden;
-}
+
 .main{
     display: flex;
     gap: var(--space);
     flex: 1;
     color: var(--grey);
     padding: var(--space);
+    overflow: hidden;
     
-
-    .calender-container{
+    .calendar-container{
         width: 65%;
-        background-color: red;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto 1fr;
         gap: var(--space);
-       
+        overflow: hidden;
 
         &> *{
             background-color: #fff;
-            border-radius: var(--rounding);
             width: 100%;
         }
-        
+        .month-year, table.calendar{
+            border-radius: var(--rounding);
+        }
         .month-year{
             display: flex;
             align-items: center;
             height: 2.5rem;
-            color: var(--third-color);
+            color: var(--main-color);
             padding: 0.75rem;
+            i.pencil2{
+                padding-right: 5px;
+                display: none;
+            }
             h2{
                 font-weight: 600;
             }
-            i{
+            i.unfold_more{
                 margin-left: auto;           
             }
-            button.add-event{
-                background-color: var(--main-color); 
+            button{
+                background-color: var(--second-main-color); 
                 color: #fff;
                 font-size: 12px;
                 padding: 5px;
@@ -148,12 +157,12 @@ body{
                 }
             }
         }
-        
         .table-container{
-            color: grey;
-        }
+            overflow: hidden;
+            border-radius: var(--rounding);
+            scrollbar-width: none;
 
-       
+        }       
     }
     .calendar-tools{
         flex: 1;
@@ -162,7 +171,7 @@ body{
         flex-direction: column;
         gap: var(--space);
 
-        &>* {
+        & > * {
             background-color: #fff;
             border-radius: var(--rounding);
             width: 100%;
@@ -170,12 +179,30 @@ body{
         }
     }
 }
-
-/* @media (max-width: 1200px) {
-    body{
-        background-color: blue;
+/* (min-width: 1000px) and (max-height: 544px) */
+@media (min-width: 1300px){
+    /* :root {
+        --space: 8.5px;
+    } */
+    
+    body {
+        background-color: rgb(144, 153, 51);
     }
-}*/
+    nav{
+        height: 4.2rem; 
+        i{
+            font-size: 2rem;
+        }
+        h1{
+            font-size: 2.5rem;
+        }
+    }
+    .main{
+        .calendar-container{
+            width: 75%;
+        }
+    }
+}
 @media (max-width: 990px) {
     :root {
         --space: 8.5px;
@@ -184,7 +211,7 @@ body{
         background-color: rebeccapurple;
     }
 } 
-@media (max-width: 768px) {
+@media (max-width: 768px){
     :root {
         --space: 7.5px;
     }
@@ -199,7 +226,7 @@ body{
         }
     }
 }
-@media (max-width: 550px) {
+@media (max-width: 550px) /*or (max-aspect-ratio: 4/3)*/{
     :root{
         --space: 5px;
     }
@@ -211,10 +238,9 @@ body{
         margin-bottom: 2.45rem;
         position: relative;
 
-        .calender-container{
+        .calendar-container{
+            min-height: 55dvh;
             width: 100%;
-            grid-template-columns: 1fr;
-            grid-template-rows: auto auto;
             gap: 0px;
 
             .month-year {
@@ -223,18 +249,23 @@ body{
                 h2 {
                     font-weight: 600;
                 }
-            }
-            h2{
+                i.pencil2 {
+                    display: initial;
+                    color: var(--accent-color);
+                }
             }
             .table-container{
                 border-radius: 0 0 var(--rounding) var(--rounding);
-                min-height: 50dvh;
+                height: 100%;
+                overflow: visible;
+                table.calendar{
+                    height: 100%;
+                    border-radius: 0 0 var(--rounding) var(--rounding);
+                }
             }
         }
-
         .calendar-tools{
             flex-direction: row;
-            flex: 50%;
             margin-top: auto;
 
             &>* {
@@ -253,24 +284,34 @@ body{
         }
         .navlinks{
             margin: 0;
-            transform: scale(0.6);
 
             li{
                 border-radius: 5px;
                 margin: 0 10px;
+                height: 2.2rem;
+                width: 2.2rem;
             }
         }
     }
 }
-@media (max-width: 380px) {
+@media (max-width: 420px) {
     body{
         background-color: orange;
+        
+    }
+    .calendar-container {
+        .month-year {  
+            button.add-event { display: initial;}
+        }
+    }
+    .calendar-tools{
+        .upcoming-events{
+            width: 100%;
+        }
+        .add-event-container{
+            display: none;
+        }
     }
     
 }
-/* @media (max-height: 380px) and (max-width: 200px){
-    body {
-        background-color: orange;
-    }
 
-} */

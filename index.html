@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="purple">
+<html lang="en" data-color-theme="purple">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,320 +24,492 @@
         </ul>
     </nav>
     <div class="main" id="main">
-        <div class="calender-container">
+        <div class="calendar-container">
             <div class="month-year">
+                <i class="less pencil2"></i>
                 <h2><span class="month">January</span>, <span class="year">2026</span></h2>
                 <i class="_more unfold_more"></i>
                 <button class="add-event">Add Event</button>
             </div>
-            
             <div class="table-container">
                 <table class="calendar">
-                    <!-- <thead class="days-of-the-week">
-                        <th class="sun">Sunday</th>
-                        <th class="mon">Monday</th>
-                        <th class="tue">Tuesday</th>
-                        <th class="wed">Wednesday</th>
-                        <th class="thur">Thursday</th>
-                        <th class="fri">Friday</th>
-                        <th class="sat">Saturday</th>
-                    </thead>
-                    <tr class="row">
-                        <td class="active sun">
-                            <span class="day">01</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active mon">
-                            <span class="day">02</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                            </ul>
-                        </td>
-                        <td class="active tue">
-                            <span class="day">03</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                            </ul>
-                        </td>
-                        <td class="active wed">
-                            <span class="day">04</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                                <li>event4</li>
-                                <li>event5</li>
-                                <li>event6</li>
-                            </ul>
-                        </td>
-                        <td class="active thur">
-                            <span class="day">05</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active fri">
-                            <span class="day">06</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active sat">
-                            <span class="day">07</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr class="row">
-                        <td class="active sun">
-                            <span class="day">08</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active mon">
-                            <span class="day">09</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active tue">
-                            <span class="day">10</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active wed">
-                            <span class="day">11</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active thur">
-                            <span class="day">12</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active fri">
-                            <span class="day">13</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active sat">
-                            <span class="day">14</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr class="row">
-                        <td class="active sun">
-                            <span class="day">15</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active mon">
-                            <span class="day">16</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active tue">
-                            <span class="day">17</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active wed">
-                            <span class="day">18</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active thur">
-                            <span class="day">19</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active fri">
-                            <span class="day">20</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active sat">
-                            <span class="day">21</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr class="row">
-                        <td class="active sun">
-                            <span class="day">22</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active mon">
-                            <span class="day">23</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active tue">
-                            <span class="day">24</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active wed">
-                            <span class="day">25</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active thur">    
-                            <span class="day">26</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active fri">
-                            <span class="day">27</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active sat">
-                            <span class="day">28</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                    </tr>
-                    <tr class="row">
-                        <td class="active sun">
-                            <span class="day">29</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active mon">
-                            <span class="day">30</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="active tue">
-                            <span class="day">31</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="wed">
-                            <span class="day">01</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>              
-                        </td>
-                        <td class="thur">
-                            <span class="day">02</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="fri">
-                            <span class="day">03</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                        <td class="sat">
-                            <span class="day">04</span>
-                            <ul class="day events">
-                                <li>event1</li>
-                                <li>event2</li>
-                                <li>event3</li>
-                            </ul>
-                        </td>
-                    </tr> -->
+                    <tbody>
+                        <tr class="days-of-the-week">
+                            <th class="sun">Sunday</th>
+                            <th class="mon">Monday</th>
+                            <th class="tue">Tuesday</th>
+                            <th class="wed">Wednesday</th>
+                            <th class="thur">Thursday</th>
+                            <th class="fri">Friday</th>
+                            <th class="sat">Saturday</th>
+                        </tr>
+                        <tr>
+                            <td class="sun">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event blah blah blah blah</span>
+                                        </li>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event stuff stuff stuff stuff stuff</span>
+                                        </li>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                        <span class="more"><i class="_more add"></i><span class="qty">2 more</span></span>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="mon">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event stuff stuff stuff stuff stuff</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="tue">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="wed">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="thur">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="fri">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="sat">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sun">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="mon">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="tue">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="wed">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="thur">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="fri">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="sat">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sun">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="mon">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="tue">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="wed">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="thur">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="fri">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="sat">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sun">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="mon">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="tue">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="wed">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="thur">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="fri">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="sat">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="sun">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="mon">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="tue">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="wed">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="thur">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="fri">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                            <td class="sat">
+                                <div class="day-wrapper">
+                                    <span class="date-num">1</span>
+                                    <i class="_more more_vert"></i>
+                                    <ul>
+                                        <li>
+                                            <span class="time"><i class="_more access_time"></i>12:00</span>
+                                            <span class="event">The event</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                    
                 </table>
             </div>
         </div>
         <div class="calendar-tools">
             <div class="upcoming-events"></div>
-            <div class="add-event"></div>
+            <div class="add-event-container"></div>
         </div>
         
     </div>
